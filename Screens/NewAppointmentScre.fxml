@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="674.0" maxWidth="633.0" minHeight="674.0" minWidth="633.0" prefHeight="674.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="teoespero.jappointment.Controllers.NewAppointmentScreController">
+    <children>
+      <TitledPane collapsible="false" layoutX="14.0" layoutY="380.0" prefHeight="217.0" prefWidth="606.0" text="Appointment Schedule" />
+      <TitledPane collapsible="false" layoutX="14.0" layoutY="63.0" prefHeight="304.0" prefWidth="606.0" text="Appointment Information" />
+        <TextField editable="false" focusTraversable="false" layoutX="141.0" layoutY="103.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" promptText="Auto Generated" />
+        <TextField fx:id="txtAppointmentTitle" layoutX="141.0" layoutY="145.0" maxHeight="27.0" maxWidth="450.0" minHeight="27.0" minWidth="450.0" prefHeight="27.0" prefWidth="450.0" />
+        <TextField fx:id="txtAppointmentDescription" layoutX="141.0" layoutY="189.0" maxHeight="27.0" maxWidth="450.0" minHeight="27.0" minWidth="450.0" prefHeight="27.0" prefWidth="450.0" />
+        <TextField fx:id="txtAppointmentLocation" layoutX="141.0" layoutY="229.0" maxHeight="27.0" maxWidth="450.0" minHeight="27.0" minWidth="450.0" prefHeight="27.0" prefWidth="450.0" />
+        <TextField fx:id="txtAppointmentType" layoutX="141.0" layoutY="271.0" maxHeight="27.0" maxWidth="450.0" minHeight="27.0" minWidth="450.0" prefHeight="27.0" prefWidth="450.0" />
+        <ComboBox fx:id="cboAppointmentContact" layoutX="141.0" layoutY="316.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" />
+      <DatePicker fx:id="pkrAppointmentStartDate" layoutX="142.0" layoutY="423.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" />
+      <DatePicker fx:id="pkrAppointmentEndDate" layoutX="142.0" layoutY="466.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" />
+      <TextField fx:id="txtAppointmentCustomerID" editable="false" focusTraversable="false" layoutX="142.0" layoutY="508.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" promptText="Auto Generated" />
+      <TextField fx:id="txtAppointmentUserID" editable="false" focusTraversable="false" layoutX="142.0" layoutY="552.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" promptText="Auto Generated" />
+      <Spinner fx:id="spnrAppointmentStartTime" layoutX="435.0" layoutY="423.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" />
+      <Spinner fx:id="spntAppointmentEndTime" layoutX="435.0" layoutY="466.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" prefHeight="27.0" prefWidth="161.0" />
+      <ComboBox fx:id="cboAppointmentCustomer" layoutX="437.0" layoutY="508.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" onAction="#cboCustomerClicked" prefHeight="27.0" prefWidth="161.0" />
+        <Label focusTraversable="false" layoutX="34.0" layoutY="108.0" text="Appointment ID:" />
+        <Label focusTraversable="false" layoutX="32.0" layoutY="150.0" prefHeight="17.0" prefWidth="78.0" text="Title:" />
+        <Label focusTraversable="false" layoutX="35.0" layoutY="194.0" prefHeight="17.0" prefWidth="88.0" text="Description:" />
+        <Label focusTraversable="false" layoutX="32.0" layoutY="234.0" prefHeight="17.0" prefWidth="88.0" text="Location:" />
+        <Label focusTraversable="false" layoutX="33.0" layoutY="276.0" prefHeight="17.0" prefWidth="88.0" text="Type:" />
+        <Label focusTraversable="false" layoutX="32.0" layoutY="321.0" prefHeight="17.0" prefWidth="88.0" text="Contact:" />
+      <Label focusTraversable="false" layoutX="34.0" layoutY="428.0" prefHeight="17.0" prefWidth="88.0" text="Start Date:" />
+      <Label focusTraversable="false" layoutX="358.0" layoutY="428.0" prefHeight="17.0" prefWidth="69.0" text="Start Time:" />
+      <Label focusTraversable="false" layoutX="34.0" layoutY="471.0" prefHeight="17.0" prefWidth="78.0" text="End Date:" />
+      <Label focusTraversable="false" layoutX="34.0" layoutY="513.0" prefHeight="17.0" prefWidth="88.0" text="Customer ID:" />
+      <Label focusTraversable="false" layoutX="34.0" layoutY="557.0" prefHeight="17.0" prefWidth="78.0" text="User ID:" />
+      <Label focusTraversable="false" layoutX="358.0" layoutY="471.0" prefHeight="17.0" prefWidth="69.0" text="End Time:" />
+      <Label focusTraversable="false" layoutX="358.0" layoutY="557.0" prefHeight="17.0" prefWidth="69.0" text="User:" />
+      <Label focusTraversable="false" layoutX="15.0" layoutY="28.0" prefHeight="35.0" prefWidth="216.0" text="New Appointment">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="358.0" layoutY="513.0" prefHeight="17.0" prefWidth="69.0" text="Customer:" />
+        <Button layoutX="285.0" layoutY="616.0" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#btnSaveClicked" prefHeight="30.0" prefWidth="150.0" text="Save" />
+        <Button layoutX="445.0" layoutY="616.0" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" mnemonicParsing="false" onAction="#btnCancelClicked" prefHeight="30.0" prefWidth="150.0" text="Cancel" />
+      <ComboBox fx:id="cboAppointmentUser" layoutX="437.0" layoutY="552.0" maxHeight="27.0" maxWidth="161.0" minHeight="27.0" minWidth="161.0" onAction="#cboUserClicked" prefHeight="27.0" prefWidth="161.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="700.0" maxWidth="895.0" minHeight="700.0" minWidth="895.0" prefHeight="700.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="teoespero.jappointment.Controllers.MonthByTypeReportScreController">
+    <children>
+        <Label layoutX="43.0" layoutY="23.0" text="Appointment Count by Month and Type">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="grdReport" layoutX="43.0" layoutY="64.0" maxHeight="570.0" maxWidth="810.0" minHeight="570.0" minWidth="810.0" prefHeight="570.0" prefWidth="810.0" style="-fx-background-color: rgba(255,255,255,0.75),                           linear-gradient(to bottom,#aaaaaa 0%,#cccccc 100%); -fx-background-insets: 0,1; -fx-padding: 1px; -fx-background-radius: 1px; -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.75),1,0,1,1);">
+            <columns>
+                <TableColumn fx:id="fldApptYear" prefWidth="95.0" text="Year" />
+                <TableColumn fx:id="fldApptMonth" prefWidth="155.0" text="Month" />
+                <TableColumn fx:id="fldApptType" prefWidth="259.0" text="Type" />
+                <TableColumn fx:id="fldApptCount" prefWidth="167.0" text="Total" />
+            </columns>
+        </TableView>
+        <Button layoutX="723.0" layoutY="640.0" maxHeight="27.0" maxWidth="130.0" minHeight="27.0" minWidth="130.0" mnemonicParsing="false" onAction="#btnCloseClicked" prefHeight="27.0" prefWidth="130.0" text="Close" />
+        <Label layoutX="43.0" layoutY="645.0" text="Report Timestamp:" />
+        <Label fx:id="timestampLabel" layoutX="155.0" layoutY="645.0" text="Label" />
+    </children>
+</AnchorPane>

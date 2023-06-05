@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="505.0" maxWidth="780.0" minHeight="505.0" minWidth="780.0" prefHeight="505.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="teoespero.jappointment.Controllers.AppointmentScreController">
+    <children>
+      <TitledPane animated="false" collapsible="false" layoutX="40.0" layoutY="56.0" prefHeight="71.0" prefWidth="217.0" text="View Appointments By">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="57.0" prefWidth="215.0">
+               <children>
+                    <RadioButton fx:id="rdoApptByWeek" layoutX="74.0" layoutY="16.0" mnemonicParsing="false" onAction="#rdoApptByWeekAction" text="Week">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grpAppointmentsView" />
+                        </toggleGroup>
+                  </RadioButton>
+                    <RadioButton fx:id="rdoApptByMonth" layoutX="142.0" layoutY="16.0" mnemonicParsing="false" onAction="#rdoApptByMonthAction" text="Month" toggleGroup="$grpAppointmentsView" />
+                    <RadioButton fx:id="rdoAllAppts" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#rdoAllApptsAction" text="All" toggleGroup="$grpAppointmentsView" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+        <Label layoutX="42.0" layoutY="14.0" text="Appointments">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblViewAppointments" layoutX="40.0" layoutY="133.0" maxHeight="285.0" maxWidth="700.0" minHeight="285.0" minWidth="700.0" onMouseClicked="#onDoubleClicked" prefHeight="285.0" prefWidth="700.0" style="-fx-background-color: rgba(255,255,255,0.75),                           linear-gradient(to bottom,#aaaaaa 0%,#cccccc 100%); -fx-background-insets: 0,1; -fx-padding: 1px; -fx-background-radius: 1px; -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.75),1,0,1,1);">
+            <columns>
+                <TableColumn fx:id="fldApptID" prefWidth="34.0" text="ID" />
+                <TableColumn fx:id="fldTitle" prefWidth="62.0" text="Title" />
+                <TableColumn fx:id="fldDescription" prefWidth="144.0" text="Description" />
+                <TableColumn fx:id="fldLocation" prefWidth="108.0" text="Location" />
+                <TableColumn fx:id="fldContact" prefWidth="68.0" text="Contact" />
+                <TableColumn fx:id="fldType" prefWidth="68.0" text="Type" />
+                <TableColumn fx:id="fldApptStart" prefWidth="63.0" text="Start" />
+                <TableColumn fx:id="fldApptEnd" prefWidth="59.0" text="End" />
+                <TableColumn fx:id="fldCustomerID" prefWidth="92.0" text="Customer ID" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnNewAppointment" layoutX="43.0" layoutY="428.0" maxHeight="127.0" maxWidth="130.0" minHeight="27.0" minWidth="130.0" mnemonicParsing="false" onAction="#btnNewAppointmentClicked" prefHeight="27.0" prefWidth="130.0" text="New Appointment" />
+        <Button fx:id="btnModifyAppointment" layoutX="182.0" layoutY="428.0" maxHeight="27.0" maxWidth="130.0" minHeight="27.0" minWidth="130.0" mnemonicParsing="false" onAction="#btnModifyAppointmentClicked" prefHeight="27.0" prefWidth="130.0" text="Modify Appointment" />
+        <Button fx:id="btnDeleteAppointment" layoutX="319.0" layoutY="428.0" maxHeight="27.0" maxWidth="130.0" minHeight="27.0" minWidth="130.0" mnemonicParsing="false" onAction="#btnDeleteAppointmentClicked" prefHeight="27.0" prefWidth="130.0" text="Delete Appointment" />
+        <Button fx:id="btnCustomers" layoutX="460.0" layoutY="428.0" maxHeight="27.0" maxWidth="130.0" minHeight="27.0" minWidth="130.0" mnemonicParsing="false" onAction="#btnCustomersClicked" prefHeight="27.0" prefWidth="130.0" text="Customers" />
+        <Button fx:id="btnReports" layoutX="607.0" layoutY="428.0" maxHeight="27.0" maxWidth="130.0" minHeight="27.0" minWidth="130.0" mnemonicParsing="false" onAction="#btnReportsClicked" prefHeight="27.0" prefWidth="130.0" text="Reports" />
+        <Button fx:id="btnExit" layoutX="607.0" layoutY="466.0" maxHeight="27.0" maxWidth="130.0" minHeight="27.0" minWidth="130.0" mnemonicParsing="false" onAction="#btnExitClicked" prefHeight="27.0" prefWidth="130.0" text="Exit" />
+        <Button fx:id="btnClearSearchBox" layoutX="638.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnClearSearchBoxClicked" prefHeight="25.0" prefWidth="99.0" text="Clear" />
+        <Button fx:id="btnSearch" layoutX="533.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnSearchClicked" prefHeight="25.0" prefWidth="99.0" text="Search" />
+        <TextField fx:id="txtSearchBox" layoutX="268.0" layoutY="99.0" maxHeight="27.0" maxWidth="248.0" minHeight="27.0" minWidth="248.0" onKeyPressed="#keyEnterPressed" prefHeight="27.0" prefWidth="248.0" promptText="Find appointments" />
+    </children>
+</AnchorPane>
